@@ -23,7 +23,7 @@ function preload() {
   titulo = loadImage("data/portadadeprueba.jpeg");
   
   
-  for (let i=1; i<10; i++) {
+  for (let i=1; i<11; i++) {
     imagenes[i] = loadImage("data/"+i+".jpeg");
   }
 }
@@ -164,14 +164,25 @@ image(imagenes[8], width/2, height/2, width, height);
  
  
  }
- //HISTORIA ALTERNATIVA 1
+ //HISTORIA ALTERNATIVA  (4C)
  
  else if (pantalla == 11) {
 
   
 image(imagenes[9], width/2, height/2, width, height);
   
- dibujarBoton(posXBotonI,posYBotonI,tamXBoton,tamYBoton,"SIGUIENTE");
+  dibujarBoton(posXBoton1,posYBoton1,tamXBoton ,tamYBoton,"IZQUIERDA");
+  dibujarBoton(posXBoton2,posYBoton2,tamXBoton ,tamYBoton,"DERECHA");
+ }
+ 
+ //FINAL ALTERNATIVO (5d)
+ 
+ else if (pantalla == 13) {
+
+  
+image(imagenes[10], width/2, height/2, width, height);
+  
+  dibujarBoton(posXBotonI,posYBotonI,tamXBoton,tamYBoton,"CREDITOS");
  }
 }
 
@@ -299,4 +310,17 @@ else if (pantalla == 6) {
       pantalla = 11;
     }
 }
+ else if (pantalla == 11) {
+
+    // BOTÓN 1 VA A LA PANTALLA 12 ()
+    if (detectarZonaR(posXBoton1, posYBoton1, tamXBoton + 50, tamYBoton)) {
+      pantalla = 12;
+    }
+
+    // BOTÓN 2 VA A LA PANTALLA 13 ()
+    else if (detectarZonaR(posXBoton2, posYBoton2, tamXBoton + 50 , tamYBoton)) {
+      pantalla = 13;
+    }
+ }
+
 }
