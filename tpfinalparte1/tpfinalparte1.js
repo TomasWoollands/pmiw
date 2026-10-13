@@ -465,19 +465,6 @@ else if (pantalla == 9) {
 
     }
  }
-
- //HISTORIA ALTERNATIVA 
- else if (pantalla == 4) {
-
-    // BOTÓN 1 VA A LA PANTALLA 7 (5)
-    if (detectarZonaR(posXBoton1, posYBoton1, tamXBoton + 50, tamYBoton)) {
-      pantalla = 10;
-    }
-
-    // BOTÓN 2 VA A LA PANTALLA 8 (5c)
-    else if (detectarZonaR(posXBoton2, posYBoton2, tamXBoton + 50 , tamYBoton)) {
-      pantalla = 11;
-    }
 }
  else if (pantalla == 11) {
 
