@@ -48,7 +48,6 @@ function preload(){
 
 function setup() {
 createCanvas(800, 400);
-pantalla = 0 ;
 textFont(miFuente); 
 imageMode(CORNER);
   
@@ -72,3 +71,4 @@ function mousePressed() {
  juego.detectarClic();
  
 }
+
